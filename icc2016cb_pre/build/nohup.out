@@ -1,0 +1,583 @@
+
+                            Design Compiler (R) NXT 
+
+                 Version Q-2019.12 for linux64 - Nov 26, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# Edit your top module name here
+set top LBP
+LBP
+# Don't change anything below this line
+set_host_options -max_cores 16
+1
+# Read all Files
+read_file -autoread -top ${top} -recursive {../src} -library ${top}
+== READ_FILE autoread for top design 'LBP' ==
+
+Starting READ_FILE autoread mode...
+Warning: Defining design library 'LBP' at directory '/home/caid035/Louis/ICC-2016/icc2016cb_pre/build/LBP_autoread'. (AUTOREAD-107)
+Information: Adding '/home/caid035/Louis/ICC-2016/icc2016cb_pre/src'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/home/caid035/Louis/ICC-2016/icc2016cb_pre/src'. (AUTOREAD-105)
+Information: HDL language of file golden1.dat is not defined. (AUTOREAD-103)
+Information: Adding '/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'.  (AUTOREAD-100)
+Information: Scanning file { LBP.v }. (AUTOREAD-303)
+Compiling source file /home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v
+Presto compilation completed successfully.
+Elaborating top design LBP
+Loading db file '/home/nfs_cad/lib/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db'
+Loading db file '/home/nfs_cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/home/nfs_cad/synopsys/synthesis/cur/libraries/syn/gtech.db'
+Loading db file '/home/nfs_cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  /home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v:111: signed to unsigned assignment occurs. (VER-318)
+
+Statistics for case statements in always block at line 36 in file
+	'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            39            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 83 in file
+	'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            89            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine LBP line 31 in file
+		'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LBP line 68 in file
+		'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       row_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       row_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       col_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       col_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LBP line 83 in file
+		'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    gray_addr_reg    | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   counterRead_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LBP line 106 in file
+		'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mid_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      buff_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine LBP line 115 in file
+		'/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    gray_req_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (LBP)
+Elaborated 1 design.
+Current design is now 'LBP'.
+Autoread command completed successfully.
+current_design [get_designs ${top}]
+Current design is 'LBP'.
+{LBP}
+link
+
+  Linking design 'LBP'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  LBP                         /home/caid035/Louis/ICC-2016/icc2016cb_pre/build/LBP.db
+  slow (library)              /home/nfs_cad/lib/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db
+  dw_foundation.sldb (library) /home/nfs_cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+1
+# Setting Clock Constraits
+source -echo -verbose ../script/${top}.sdc
+# operating conditions and boundary conditions #
+set cycle  9         ;#clock period defined by designer
+9
+create_clock -period $cycle [get_ports  clk]
+1
+set_dont_touch_network      [get_clocks clk]
+1
+set_clock_uncertainty  0.1  [get_clocks clk]
+1
+set_clock_latency      0.5  [get_clocks clk]
+1
+set_input_delay  5      -clock clk [remove_from_collection [all_inputs] [get_ports clk]]
+1
+set_output_delay 0.5    -clock clk [all_outputs] 
+1
+set_load         1     [all_outputs]
+1
+set_drive        1     [all_inputs]
+1
+set_operating_conditions -max_library slow -max slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+set_wire_load_model -name tsmc13_wl10 -library slow                        
+1
+set_max_fanout 20 [all_inputs]
+1
+1
+# High fanout threshold
+set high_fanout_net_threshold 0
+0
+report_net_fanout -high_fanout
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : net fanout
+        -high_fanout
+Design : LBP
+Version: Q-2019.12
+Date   : Wed Mar 23 16:09:30 2022
+****************************************
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+LBP                    tsmc13_wl10       slow
+
+
+Attributes:
+   dr - drc disabled
+    c - annotated capacitance
+    d - dont_touch
+    i - ideal_net
+    I - ideal_network
+    p - includes pin load
+    r - annotated resistance
+    h - high fanout
+
+Net                 Fanout   Attributes   Capacitance   Driver
+--------------------------------------------------------------------------------
+1
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants [get_designs *]
+1
+set_structure -timing true
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     Q-2019.12
+Date:        Wed Mar 23 16:09:30 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               1
+    Cells do not drive (LINT-1)                                     1
+
+Nets                                                               11
+    Unloaded nets (LINT-2)                                         11
+--------------------------------------------------------------------------------
+
+Warning: In design 'LBP', cell 'B_27' does not drive any nets. (LINT-1)
+Warning: In design 'LBP', net 'net101' driven by pin 'C675/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net100' driven by pin 'C662/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net99' driven by pin 'C661/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net98' driven by pin 'C660/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net97' driven by pin 'C659/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net96' driven by pin 'C658/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net95' driven by pin 'C657/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net94' driven by pin 'C656/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net93' driven by pin 'C655/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net92' driven by pin 'C682/Z' has no loads. (LINT-2)
+Warning: In design 'LBP', net 'net91' driven by pin 'C611/Z' has no loads. (LINT-2)
+1
+#compile -map_effort high
+#compile -map_effort high -inc
+#compile_ultra -no_autoungroup -no_boundary_optimization -retime -gate_clock
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 16 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'LBP'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'LBP'
+Information: Added key list 'DesignWare' to design 'LBP'. (DDB-72)
+ Implement Synthetic for 'LBP'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+
+  Beginning Constant Register Removal
+  -----------------------------------
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:03    3652.8      8.20      23.0     280.4                           2818891.5000
+    0:00:03    3861.6      0.00       0.0     261.8                           2986094.0000
+    0:00:03    3861.6      0.00       0.0     261.8                           2986094.0000
+    0:00:03    3880.3      0.24       0.3     253.0                           2992077.2500
+MAPPED_RR: alt LBP out of 318 cells,  passing 216 cells to ABO for mapped RR
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+MAPPED_RR: alt LBP out of 318 cells,  passing 216 cells to ABO for mapped RR
+    0:00:04    3719.0      0.23       0.3     240.5                           2802314.2500
+    0:00:04    3727.5      0.01       0.0     240.5                           2808759.2500
+    0:00:04    3727.5      0.01       0.0     240.5                           2808759.2500
+    0:00:04    3724.1      0.01       0.0     240.5                           2805443.7500
+    0:00:04    3724.1      0.01       0.0     240.5                           2805443.7500
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    3747.9      0.00       0.0     240.5                           2841504.5000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:00:04    4207.9      0.00       0.0       0.0                           3353405.7500
+    0:00:04    4207.9      0.00       0.0       0.0                           3353405.7500
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    4207.9      0.00       0.0       0.0                           3353405.7500
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04    4039.8      0.00       0.0       0.0                           3155098.2500
+    0:00:04    4009.3      0.00       0.0       0.0                           3179809.0000
+    0:00:04    4009.3      0.00       0.0       0.0                           3179809.0000
+    0:00:04    4009.3      0.00       0.0       0.0                           3179809.0000
+    0:00:04    4009.3      0.00       0.0       0.0                           3179809.0000
+    0:00:04    4002.5      0.00       0.0       0.0                           3162583.5000
+    0:00:04    4002.5      0.00       0.0       0.0                           3162583.5000
+    0:00:04    4002.5      0.00       0.0       0.0                           3162583.5000
+    0:00:04    4002.5      0.00       0.0       0.0                           3162583.5000
+    0:00:04    4002.5      0.00       0.0       0.0                           3162583.5000
+    0:00:04    4002.5      0.00       0.0       0.0                           3162583.5000
+    0:00:04    3994.0      0.00       0.0       0.0                           3160643.0000
+Loading db file '/home/nfs_cad/lib/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+compile_ultra -incremental
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 16 cores. (OPT-1500)
+
+Loaded alib file './alib-52/slow.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:01    3994.0      0.00       0.0       0.0                           3160643.0000
+    0:00:02    3966.8      0.00       0.0      27.6                           3119990.7500
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    3966.8      0.00       0.0      27.6                           3119990.7500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+    0:00:02    4036.4      0.00       0.0       0.0                           3198284.2500
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02   42256.6      0.00       0.0       0.0                           3198284.2500
+    0:00:02   42256.6      0.00       0.0       0.0                           3198284.2500
+    0:00:02   42087.8      0.00       0.0       0.0                           3156952.5000
+    0:00:02   42087.8      0.00       0.0       0.0                           3156952.5000
+    0:00:02   42087.8      0.00       0.0       0.0                           3156952.5000
+    0:00:02   42087.8      0.00       0.0       0.0                           3156952.5000
+Loading db file '/home/nfs_cad/lib/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+current_design [get_designs ${top}]
+Current design is 'LBP'.
+{LBP}
+remove_unconnected_ports -blast_buses [get_cells -hierarchical *]
+1
+set bus_inference_style {%s[%d]}
+%s[%d]
+set bus_naming_style {%s[%d]}
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed {a-z A-Z 0-9 _}   -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed {a-z A-Z 0-9 _[]} -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+# Write sdf
+write -format ddc -hierarchy -output "${top}_syn.ddc"
+Writing ddc file 'LBP_syn.ddc'.
+1
+write_file -format verilog -hierarchy -output ../syn/${top}_syn.v
+Writing verilog file '/home/caid035/Louis/ICC-2016/icc2016cb_pre/syn/LBP_syn.v'.
+1
+write_sdf -version 2.0 -context verilog  ../syn/${top}_syn.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/caid035/Louis/ICC-2016/icc2016cb_pre/syn/LBP_syn.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+write_sdc -version 2.0 ${top}.sdc
+1
+report_area > area.log
+report_timing > timing.log
+report_qor > ${top}_syn.qor
+# exit
+Warning: Cannot use command line editor for terminal type 'xterm-256color'.  (UI-74)
+dcnxt_shell> 
+Thank you...

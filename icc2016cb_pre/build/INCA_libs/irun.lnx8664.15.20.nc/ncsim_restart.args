@@ -1,0 +1,27 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
++incdir+/home/caid035/Louis/ICC-2016/icc2016cb_pre/src
++nc64bit
++access+r
++define+FSDB_FILE=\"LBP.fsdb\"
+-MESSAGES
++EMGRLOG
+ncverilog.log
+-XLSTIME
+1648290843
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-XLNAME
+ncverilog
+-XLVERSION
+"TOOL:	ncverilog	15.20-s084"
+-XLNAME
+./INCA_libs/irun.lnx8664.15.20.nc/caidcpuserver1_2738131

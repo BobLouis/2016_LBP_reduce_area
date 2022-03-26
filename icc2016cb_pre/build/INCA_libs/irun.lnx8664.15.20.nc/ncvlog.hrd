@@ -1,0 +1,8 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-INCDIR
+/home/caid035/Louis/ICC-2016/icc2016cb_pre/src
+-DEFINE
+FSDB_FILE=\"LBP.fsdb\"

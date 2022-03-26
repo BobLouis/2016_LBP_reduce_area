@@ -1,0 +1,10 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+/home/caid035/Louis/ICC-2016/icc2016cb_pre/sim/testfixture.v
+/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v
++incdir+/home/caid035/Louis/ICC-2016/icc2016cb_pre/src
++nc64bit
++access+r
++define+FSDB_FILE=\"LBP.fsdb\"

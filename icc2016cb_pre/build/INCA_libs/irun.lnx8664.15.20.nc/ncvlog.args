@@ -1,0 +1,22 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+/home/caid035/Louis/ICC-2016/icc2016cb_pre/sim/testfixture.v
+/home/caid035/Louis/ICC-2016/icc2016cb_pre/src/LBP.v
+-INCDIR
+/home/caid035/Louis/ICC-2016/icc2016cb_pre/src
+-DEFINE
+FSDB_FILE=\"LBP.fsdb\"
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+-ALLOWUNBOUND
